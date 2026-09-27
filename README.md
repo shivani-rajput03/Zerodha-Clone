@@ -1,120 +1,192 @@
-# Zerodha Clone
+Zerodha Clone
 
-A full-stack stock trading web application inspired by the user interface and core workflow of Zerodha. This project was developed as a learning project to practice React.js, Node.js, Express.js, MongoDB, authentication, REST APIs, and Git/GitHub.
+<p align="center">
+  <strong>A full-stack stock trading platform inspired by the Zerodha user experience.</strong>
+</p>
 
-> **Disclaimer:** This is an educational project. It is not affiliated with, endorsed by, or connected to Zerodha, and it is not intended for real financial transactions.
+<p align="center">
+  <img src="https://img.shields.io/badge/React.js-Frontend-61DAFB?logo=react&logoColor=white" />
+  <img src="https://img.shields.io/badge/Node.js-Backend-339933?logo=node.js&logoColor=white" />
+  <img src="https://img.shields.io/badge/Express.js-API-000000?logo=express&logoColor=white" />
+  <img src="https://img.shields.io/badge/MongoDB-Database-47A248?logo=mongodb&logoColor=white" />
+  <img src="https://img.shields.io/badge/Git-GitHub-F05032?logo=git&logoColor=white" />
+</p>
 
-## 📸 Screenshots
+📌 Overview
 
-### Landing Page
+Zerodha Clone is a full-stack web application developed as an educational project to understand how a modern online stock-trading platform can be structured.
 
-![Landing Page](screenshots/landing-page.png)
+The project is divided into three main applications:
 
-### Trading Dashboard - Holdings
+Frontend — Public landing pages, product information, pricing, support and account creation.
 
-![Trading Dashboard](screenshots/dashboard-holdings.png)
+Dashboard — Trading-oriented interface containing watchlist, holdings, orders, positions and funds.
 
-## ✨ Features
+Backend — REST APIs, authentication, database connectivity and portfolio-related data management.
 
-### Landing Page
-- Home page
-- Navigation bar
-- About section
-- Products section
-- Pricing section
-- Support section
-- Signup page
+Disclaimer: This is an educational project and is not affiliated with, endorsed by, or connected to Zerodha.
 
-### Trading Dashboard
-- Dashboard overview
-- Stock watchlist
-- Stock search
-- Buy action interface
-- Sell action interface
-- Holdings
-- Orders
-- Positions
-- Funds
-- Apps section
+✨ Key Features
 
-### Backend
-- User registration/authentication
-- JWT-based authentication
-- Password hashing
-- MongoDB database integration
-- Holdings management
-- Orders management
-- Positions management
-- REST API endpoints
+🌐 Frontend
 
-## 🛠️ Technologies Used
+Landing page
 
-### Frontend
-- React.js
-- JavaScript
-- HTML
-- CSS
+Navigation and footer
 
-### Dashboard
-- React.js
-- JavaScript
-- HTML
-- CSS
+Products section
 
-### Backend
-- Node.js
-- Express.js
-- MongoDB
-- Mongoose
-- JWT
-- bcryptjs
+Pricing and brokerage information
 
-### Development Tools
-- Git
-- GitHub
-- Visual Studio Code
-- npm
+About section
 
-## 📁 Project Structure
+Support section
 
-```text
+User signup
+
+Responsive React-based interface
+
+📊 Trading Dashboard
+
+Dashboard overview
+
+Stock watchlist
+
+Stock search
+
+Buy action interface
+
+Holdings
+
+Orders
+
+Positions
+
+Funds
+
+Apps section
+
+Portfolio summary and visualizations
+
+🔐 Backend
+
+User registration and authentication
+
+JWT-based authentication
+
+Password hashing with bcryptjs
+
+MongoDB integration using Mongoose
+
+REST API routes
+
+Holdings management
+
+Orders management
+
+Positions management
+
+🖥️ Screenshots
+
+Landing Page
+
+<p align="center">
+  <img src="screenshots/landing-page.png" width="90%" alt="Zerodha Clone Landing Page">
+</p>
+
+Trading Dashboard
+
+<p align="center">
+  <img src="screenshots/dashboard-holdings.png" width="90%" alt="Zerodha Clone Dashboard">
+</p>
+
+🛠️ Tech Stack
+
+Layer
+
+Technologies
+
+Frontend
+
+React.js, JavaScript, HTML, CSS
+
+Dashboard
+
+React.js, JavaScript, CSS
+
+Backend
+
+Node.js, Express.js
+
+Database
+
+MongoDB, Mongoose
+
+Authentication
+
+JWT, bcryptjs
+
+Version Control
+
+Git, GitHub
+
+Development
+
+Visual Studio Code, npm
+
+🏗️ Project Architecture
+
+                         ┌──────────────────────┐
+                         │       Frontend       │
+                         │   React.js / UI      │
+                         └──────────┬───────────┘
+                                    │
+                                    │ API Requests
+                                    ▼
+                         ┌──────────────────────┐
+                         │       Backend        │
+                         │ Node.js + Express.js │
+                         └──────────┬───────────┘
+                                    │
+                                    │ Mongoose
+                                    ▼
+                         ┌──────────────────────┐
+                         │       MongoDB        │
+                         │       Database       │
+                         └──────────────────────┘
+
+                         ┌──────────────────────┐
+                         │      Dashboard       │
+                         │ React.js Trading UI  │
+                         └──────────┬───────────┘
+                                    │
+                                    └──── API Requests ────► Backend
+
+📂 Project Structure
+
 Zerodha-Clone/
 │
 ├── backend/
 │   ├── Controllers/
-│   │   └── AuthController.js
 │   ├── Routes/
-│   │   └── AuthRoute.js
 │   ├── model/
-│   │   ├── HoldingsModel.js
-│   │   ├── OrdersModel.js
-│   │   ├── PositionsModel.js
-│   │   └── UserModel.js
 │   ├── schemas/
-│   │   ├── HoldingsSchema.js
-│   │   ├── OrdersSchema.js
-│   │   └── PositionsSchema.js
 │   ├── SecretToken.js
 │   ├── index.js
-│   ├── package.json
-│   └── package-lock.json
+│   └── package.json
 │
 ├── dashboard/
 │   ├── public/
 │   ├── src/
 │   │   ├── components/
 │   │   └── data/
-│   ├── package.json
-│   └── package-lock.json
+│   └── package.json
 │
 ├── frontend/
 │   ├── public/
 │   ├── src/
-│   │   ├── landing_page/
-│   │   ├── index.css
-│   │   └── index.js
-│   ├── package.json
-│   └── package-lock.json
+│   │   └── landing_page/
+│   └── package.json
 │
 ├── screenshots/
 │   ├── landing-page.png
@@ -122,144 +194,140 @@ Zerodha-Clone/
 │
 ├── .gitignore
 └── README.md
-```
 
-## ⚙️ Installation and Setup
+⚙️ Getting Started
 
-### 1. Clone the repository
+Prerequisites
 
-```bash
+Make sure the following are installed:
+
+Node.js
+
+npm
+
+MongoDB / MongoDB Atlas
+
+Git
+
+1. Clone the Repository
+
 git clone https://github.com/shivani-rajput03/Zerodha-Clone.git
 cd Zerodha-Clone
-```
 
-### 2. Set up the backend
+2. Backend Setup
 
-Open a terminal in the project folder and run:
-
-```bash
 cd backend
 npm install
-```
 
-Create a file named `.env` inside the `backend` folder.
+Create a .env file inside the backend directory:
 
-Add your own MongoDB connection string and JWT secret:
-
-```env
 MONGO_URL=your_mongodb_connection_string
 TOKEN_KEY=your_secret_key
-```
-
-Do **not** upload the `.env` file to GitHub.
 
 Start the backend:
 
-```bash
 node index.js
-```
 
-The backend is configured to run on port `3002`.
+3. Frontend Setup
 
-### 3. Set up the frontend
+Open a new terminal:
 
-Open another terminal:
-
-```bash
 cd frontend
 npm install
 npm start
-```
 
-The frontend is a React application. Create React App may use port `3000` or another available port depending on what is already running.
-
-### 4. Set up the dashboard
+4. Dashboard Setup
 
 Open another terminal:
 
-```bash
 cd dashboard
 npm install
 npm start
-```
 
-The dashboard is also a React application, so if another React application is already using port `3000`, React will ask to use another available port.
+🔐 Environment Variables & Security
 
-## ▶️ Running the Project
+The backend uses environment variables for sensitive configuration.
 
-Run the applications separately:
+Example:
 
-**Backend**
-```bash
-cd backend
-node index.js
-```
-
-**Frontend**
-```bash
-cd frontend
-npm start
-```
-
-**Dashboard**
-```bash
-cd dashboard
-npm start
-```
-
-Keep the backend running while using features that communicate with the API.
-
-## 🔐 Environment Variables
-
-The backend requires environment variables such as:
-
-```env
 MONGO_URL=your_mongodb_connection_string
 TOKEN_KEY=your_secret_key
-```
 
-For security:
+Never commit sensitive information such as:
 
-- Never commit `.env` to GitHub.
-- Never expose your MongoDB password.
-- Never expose private API keys or authentication secrets.
+.env
 
-## 📚 Learning Objectives
+Also keep the following private:
 
-This project helped in learning and practicing:
+MongoDB credentials
 
-- React.js component development
-- React routing and UI design
-- Node.js and Express.js
-- REST API development
-- MongoDB and Mongoose
-- User authentication
-- JWT authentication
-- Password hashing
-- Frontend-backend communication
-- Git and GitHub
-- Project organization and version control
+JWT/token secrets
 
-## 🚀 Future Improvements
+API keys
 
-Possible future enhancements include:
+Other application credentials
 
-- Real-time market data
-- Improved order execution workflow
-- Complete buy/sell transaction flow
-- Portfolio analytics
-- Better responsive design
-- Advanced charts
-- Notifications
-- Improved security and validation
+📚 Learning Outcomes
 
-## 👩‍💻 Author
+This project provided practical experience with:
 
-**Shivani Rajput**
+React component development
 
-- GitHub: [shivani-rajput03](https://github.com/shivani-rajput03)
-- LinkedIn: [Shivani Rajput](https://www.linkedin.com/in/shivani-rajput-042046342)
+Reusable UI components
 
-## 📄 License
+REST API development
 
-This project is intended for educational and personal learning purposes.
+Frontend-backend integration
+
+MongoDB and Mongoose
+
+User authentication
+
+JWT authentication
+
+Password hashing
+
+Application state management
+
+Git and GitHub
+
+Full-stack project organization
+
+🚀 Future Improvements
+
+Real-time market data
+
+Complete buy/sell transaction workflow
+
+Portfolio analytics
+
+Advanced stock charts
+
+Notifications
+
+Improved validation and security
+
+Enhanced responsive design
+
+👩‍💻 Author
+
+Shivani Rajput
+
+Computer Science & Engineering Student
+
+<p>
+  <a href="https://github.com/shivani-rajput03">GitHub</a> •
+  <a href="https://www.linkedin.com/in/shivani-rajput-042046342">LinkedIn</a>
+</p>
+
+⚠️ Disclaimer
+
+This project is created strictly for educational and learning purposes.
+
+It is inspired by the interface and workflow of an online stock-trading platform and is not affiliated with, endorsed by, or connected to Zerodha.
+
+It should not be used for real financial transactions.
+
+<p align="center">
+  ⭐ If you found this project useful, feel free to explore the repository.
+</p>
